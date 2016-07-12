@@ -130,5 +130,24 @@ public class ArrayListInt
         }
         return valor;
     }
+
+    /**
+     * devuelve el número de elementos de la colección.
+     */
+    public int size(){
+        //         int cont = 0;
+        //         for(int i = 0; i < numeros.length; i ++){
+        //             cont += numeros[i]; 
+        //         }
+        //         return cont;
+        return numeros.length;
+    }
+
 }
+
+
+
+
+
+
 
