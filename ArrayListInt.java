@@ -49,14 +49,14 @@ public class ArrayListInt
             numeros[index] = elemento;
         }
     }
-    
+
     /**
      * vacía la colección
      */
     public void clear(){
         numeros = new int[0];
     }
-    
+
     /**
      * devuelve true si la colección contiene ese elemento, false en cualquier otro caso
      */
@@ -69,12 +69,17 @@ public class ArrayListInt
         }
         return ele;
     }
+
+    /**
+     * devuelve el elemento existente en la posición indicada. Si el valor de index no es válido, entonces devuelve -1.
+     */
+    public int get(int index){
+        int element = -1;
+        if(index < numeros.length && index >= 0){
+                element = numeros[index];                
+        }
+        return element;
+    }
+
 }
-
-
-
-
-
-
-
 
