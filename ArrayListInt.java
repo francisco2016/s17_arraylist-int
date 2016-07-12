@@ -76,11 +76,11 @@ public class ArrayListInt
     public int get(int index){
         int element = -1;
         if(index < numeros.length && index >= 0){
-                element = numeros[index];                
+            element = numeros[index];                
         }
         return element;
     }
-        
+
     /**
      * reemplaza el elemento en la posición index con el valor de element. Si el índice no es válido, no hace nada.
      */
@@ -89,7 +89,7 @@ public class ArrayListInt
             numeros[index] = element;
         }
     }
-    
+
     /**
      *devuelve el indice en el que aparece la primera ocurrencia del elemento especificado o -1 en caso de que la colección
      *no contenga el elemento especificado.
@@ -103,21 +103,32 @@ public class ArrayListInt
         }
         return indice;
     }
-    
+
     /**
      * devuelve true si la lista no contiene elementos.
      */
     public boolean isEmpty(){
         return numeros.length == 0;//en este return java devuelve por defecto true si la colección está vacía.
     }
+
+    /**
+     * elimina de la colección el elemento que ocupa la posición especificada y devuelve dicho elemento. 
+     * Si el valor de index no es válido, no hace nada y devuelve -1.
+     */
+    public int remove(int index){
+        int valor = -1; //variable a devolver.
+        if(index < numeros.length && index >= 0){
+            int[] copia = numeros;
+            numeros = new int[copia.length -1];
+            for(int i = 0; i < index; i ++){
+                numeros[i] = copia[i];
+            }
+            for(int i = index; i < numeros.length; i ++){
+                numeros[i] = copia[i + 1];
+            }
+            valor = copia[index];
+        }
+        return valor;
+    }
 }
-
-
-
-
-
-
-
-
-
 
