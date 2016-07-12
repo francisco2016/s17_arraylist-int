@@ -89,6 +89,20 @@ public class ArrayListInt
             numeros[index] = element;
         }
     }
+    
+    /**
+     *devuelve el indice en el que aparece la primera ocurrencia del elemento especificado o -1 en caso de que la colección
+     *no contenga el elemento especificado.
+     */
+    public int indexOf(int elemento){
+        int indice = -1;
+        for(int i = 0; i < numeros.length; i ++){
+            if(numeros[i] == elemento){
+                indice = i;
+            }
+        }
+        return indice;
+    }
 }
 
 
