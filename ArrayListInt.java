@@ -103,6 +103,13 @@ public class ArrayListInt
         }
         return indice;
     }
+    
+    /**
+     * devuelve true si la lista no contiene elementos.
+     */
+    public boolean isEmpty(){
+        return numeros.length == 0;//en este return java devuelve por defecto true si la colección está vacía.
+    }
 }
 
 
