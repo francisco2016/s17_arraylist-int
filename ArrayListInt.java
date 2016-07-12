@@ -56,7 +56,19 @@ public class ArrayListInt
     public void clear(){
         numeros = new int[0];
     }
-
+    
+    /**
+     * devuelve true si la colección contiene ese elemento, false en cualquier otro caso
+     */
+    public boolean contains(int elemento){
+        boolean ele = false;
+        for(int i = 0; i < numeros.length; i ++){
+            if(numeros[i] == elemento){
+                ele = true;
+            }
+        }
+        return ele;
+    }
 }
 
 
