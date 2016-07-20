@@ -24,7 +24,7 @@ public class ArrayListInt
         int[] numeros2 = numeros;//VL de tipo Array que apunta al Array numeros.
         numeros = new int[numeros2.length +1];//numeros pasa a apuntar a numeros2 con una posición añadida.
         //bucle para iterar tantas veces como como elementos tiene numeros2.
-        for(int i = 0; i > numeros2.length; i ++){
+        for(int i = 0; i < numeros2.length; i ++){
             numeros[i] = numeros2[i]; //pasamos los elementos de numeros2 a numeros.
         }
         numeros[numeros2.length] = elemento;
@@ -124,7 +124,7 @@ public class ArrayListInt
                 numeros[i] = copia[i];
             }
             for(int i = index; i < numeros.length; i ++){
-                numeros[i] = copia[i + 1];
+                numeros[i] = copia[i +1];
             }
             valor = copia[index];
         }
@@ -144,10 +144,4 @@ public class ArrayListInt
     }
 
 }
-
-
-
-
-
-
 
